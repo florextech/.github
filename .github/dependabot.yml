@@ -1,0 +1,82 @@
+# Default Dependabot configuration for Florex Labs repositories.
+#
+# This file is NOT inherited from the organization-level .github repository.
+# Copy it to `.github/dependabot.yml` in the repositories that want automated
+# updates. Review the schedule before applying — private repositories should use
+# a longer interval than public ones.
+
+version: 2
+
+updates:
+  # --- JavaScript / TypeScript (pnpm) ---
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    groups:
+      typescript:
+        patterns: ["typescript", "@types/*"]
+      testing:
+        patterns: ["vitest", "jest", "playwright", "@playwright/*", "@testing-library/*"]
+      linting:
+        patterns: ["eslint", "@typescript-eslint/*", "prettier"]
+    commit-message:
+      prefix: 'chore(deps)'
+    labels: [dependencies]
+
+  # --- Node runtime ---
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: 'ci'
+    labels: [ci, dependencies]
+
+  # --- Go ---
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(deps)'
+    labels: [dependencies]
+
+  # --- Rust ---
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(deps)'
+    labels: [dependencies]
+
+  # --- Container images ---
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(docker)'
+    labels: [dependencies, ci]
+
+  # --- Terraform providers ---
+  - package-ecosystem: terraform
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(terraform)'
+    labels: [dependencies, infrastructure]

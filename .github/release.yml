@@ -1,0 +1,72 @@
+# Release notes grouping for Repos that rely on Release Drafter.
+#
+# This file is NOT inherited from the organization-level .github repository.
+# Copy it to `.github/release.yml` in any repository that uses Release Drafter.
+
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+    authors:
+      - dependabot
+  categories:
+    - title: Breaking changes
+      labels:
+        - breaking-change
+        - major
+    - title: Features
+      labels:
+        - feature
+        - enhancement
+        - feat
+    - title: Fixes
+      labels:
+        - bug
+        - fix
+        - hotfix
+    - title: Performance
+      labels:
+        - performance
+        - perf
+    - title: Security
+      labels:
+        - security
+        - vulnerability
+    - title: Documentation
+      labels:
+        - documentation
+        - docs
+    - title: Tests
+      labels:
+        - tests
+        - test
+    - title: CI and tooling
+      labels:
+        - ci
+        - maintenance
+        - dependencies
+        - dependencies-dev
+        - build
+        - tooling
+    - title: Infrastructure
+      labels:
+        - infrastructure
+        - terraform
+        - deploy
+    - title: Design system
+      labels:
+        - design-system
+    - title: Refactor
+      labels:
+        - refactor
+        - cleanup
+  labels:
+    - bug
+    - enhancement
+    - documentation
+    - tests
+    - ci
+    - dependencies
+    - infrastructure
+    - design-system
+    - skip-changelog

@@ -1,0 +1,11 @@
+# Restrict blank issues so that every report carries the context needed to act
+# on it. Individual repositories may re-enable blank issues in their own
+# config.yml, which overrides this default.
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/florextech/.github/blob/main/SECURITY.md
+    about: Report privately. Do not open a public issue for a vulnerability.
+  - name: Website or product inquiry
+    url: https://florexlabs.com
+    about: Commercial licensing, private product access, and general inquiries.

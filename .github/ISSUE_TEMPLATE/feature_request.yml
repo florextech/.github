@@ -1,0 +1,72 @@
+name: Feature request
+description: Suggest an idea, improvement, or new capability
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion.
+
+        For anything touching security, report it privately via `SECURITY.md`
+        rather than here.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the problem, not the solution. This is the most important part.
+      placeholder: I cannot tell which config file controls the crawler timeout, and the docs do not cover it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How you would solve it, and the API or CLI surface you would expect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Including workarounds you are using today.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this affect?
+      multiple: true
+      options:
+        - CLI
+        - Core library / API
+        - MCP server
+        - Documentation
+        - Developer tooling
+        - Infrastructure
+        - Design system / UI
+        - Deployment / CI
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: api
+    attributes:
+      label: Proposed interface
+      description: A code sketch helps us judge feasibility quickly.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and discussions for this
+          required: true
+        - label: This is not a security report (I read `SECURITY.md`)
+          required: true

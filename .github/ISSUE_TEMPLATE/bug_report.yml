@@ -1,0 +1,103 @@
+name: Bug report
+description: Report something that is not working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        **If you believe this is a security vulnerability, do not report it here.**
+        Follow the repository's `SECURITY.md` instead so we can protect users
+        while we prepare a fix.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the behaviour you observed.
+      placeholder: Running `florex-ui build` fails with an unresolved import error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The build should complete and write to `dist/`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that triggers the problem, starting from a clean state.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit SHA
+      placeholder: v1.2.3 or 0a1b2c3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      multiple: true
+      options:
+        - Production
+        - Staging
+        - Local development
+        - Docker / container
+        - CI
+    validations:
+      required: true
+
+  - type: textarea
+    id: system
+    attributes:
+      label: System details
+      description: Operating system, runtime and version, package manager and version.
+      value: |
+        - OS:
+        - Node:
+        - Package manager:
+        - Browser / device (if relevant):
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output or logs
+      description: Full output in a code block. Remove tokens, keys, and any personal data.
+      render: shell
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: Relevant config files or settings, redacted.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this has not been reported
+          required: true
+        - label: I removed secrets and personal data from the logs above
+          required: true
+        - label: This is not a security report (I read `SECURITY.md`)
+          required: true

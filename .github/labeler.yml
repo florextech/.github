@@ -1,0 +1,73 @@
+# Organization-wide auto-labeling.
+#
+# Used when a repository has no `.github/labeler.yml` of its own. Repos that
+# need domain-specific labels keep their own file; that file wins.
+#
+# These labels must exist in the consuming repository. See
+# `scripts/adopt-org-defaults.sh` to create them everywhere.
+'bug':
+  - '/.github/workflows/**'
+  - '/**/Dockerfile*'
+  - '/**/*.tf'
+
+'documentation':
+  - '**/*.md'
+  - 'docs/**'
+  - '/README.md'
+
+'dependencies':
+  - '**/package.json'
+  - '**/package-lock.json'
+  - '**/pnpm-lock.yaml'
+  - '**/go.mod'
+  - '**/go.sum'
+  - '**/Cargo.toml'
+  - '**/Cargo.lock'
+  - '**/Podfile'
+  - '**/Podfile.lock'
+  - '**/*.gradle*'
+  - '**/requirements*.txt'
+
+'ci':
+  - '/.github/workflows/**'
+  - '/.github/actions/**'
+  - '**/actionlint*'
+
+'tests':
+  - '**/*.test.ts'
+  - '**/*.test.tsx'
+  - '**/*.spec.ts'
+  - '**/*.spec.tsx'
+  - '**/tests/**'
+  - '**/__tests__/**'
+  - '**/e2e/**'
+  - '**/playwright.config.*'
+  - '**/vitest.config.*'
+
+'domain':
+  - '/src/domain/**'
+  - '/src/application/**'
+  - '/app/domain/**'
+  - '/apps/*/src/domain/**'
+  - '/packages/*/src/**'
+
+'infrastructure':
+  - '/infra/**'
+  - '/terraform/**'
+  - '**/*.tf'
+  - '**/*.tfvars'
+
+'documentation-site':
+  - '/site/**'
+  - '/docs-site/**'
+  - '/apps/docs/**'
+  - '**/astro.config.*'
+  - '**/content.config.*'
+
+'design-system':
+  - '/src/components/**'
+  - '/packages/ui/**'
+  - '/src/tokens/**'
+  - '/src/styles/**'
+  - '**/*.stories.tsx'
+  - '**/*.mdx'

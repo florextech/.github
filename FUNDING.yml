@@ -1,0 +1,14 @@
+# Florex Labs — organization-level funding defaults.
+#
+# Schema: https://github.com/tidelift/platform/blob/master/schema/funding-schema.json
+#
+# Florex Labs is independently funded and not maintained through sponsorship
+# platforms, so this file intentionally declares no options and GitHub will
+# render no sponsor button.
+#
+# When a sponsor link becomes available, replace this comment block with the
+# matching entry, for example:
+#
+#   github: [florextech]
+#   open_collective: florex-labs
+#   custom: ["https://florexlabs.com/support"]
