@@ -26,17 +26,8 @@ The same order applies *inside* this repository.
 repository loses the defaults entirely rather than merging. Same for discussion
 forms. A repository that wants different templates must supply a complete set.
 
-Current overrides in the organization:
-
-| Repository | Overrides |
-| --- | --- |
-| `florex-ui` | Issue templates, PR template, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` |
-| `logcat-desk` | Issue templates, PR template, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md` |
-| `docs-to-mcp` | Issue templates, PR template, `CONTRIBUTING.md`, `SECURITY.md`, `CODEOWNERS` |
-| `chaos-internet-simulator` | Issue templates, PR template, `CODE_OF_CONDUCT.md`, `SECURITY.md` |
-| `agent-bridge` | Issue templates, PR template, `CONTRIBUTING.md`, `FUNDING.yml`, `CODEOWNERS` |
-| `infrastructure` | Nothing — receives the full default set |
-| `story-then-speak` | Nothing — receives the full default set |
+Repository-specific overrides should be checked in the destination repository.
+Keep inventories of private repositories out of this public documentation.
 
 ---
 
@@ -49,7 +40,7 @@ Current overrides in the organization:
 | `SECURITY.md` | root | Reporting, disclosure timeline, safe harbor |
 | `SUPPORT.md` | root | Help channels |
 | `ACCESSIBILITY.md` | root | WCAG 2.1 AA target |
-| `FUNDING.yml` | root | No sponsor button; see comments in file |
+| `FUNDING.yml` | root (reference only) | GitHub requires `.github/FUNDING.yml` for inheritance |
 | `PULL_REQUEST_TEMPLATE.md` | `.github/` | |
 | `ISSUE_TEMPLATE/` | `.github/` | Bug, feature, question, plus `config.yml` |
 | `DISCUSSION_TEMPLATE/` | `.github/` | General, Ideas |
@@ -95,7 +86,7 @@ this repository already.
 1. Edit here, never per-repository, unless the exception is deliberate.
 2. Keep the language plain and English-first. Repositories targeting Spanish
    speakers may add their own files instead of forking these.
-3. Update the override table above when a repository adopts its own version.
+3. Check the destination repository for overrides when changing shared defaults.
 4. Keep `SECURITY.md` and `CODE_OF_CONDUCT.md` pointing at
    `hello@florexlabs.com` — that is the single contact of record.
 5. After changing a template that sets labels, run

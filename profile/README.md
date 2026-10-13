@@ -2,112 +2,46 @@
 
 # Florex Labs
 
-<sub>GitHub org: <code>florextech</code></sub>
+**Tools for developers. Software built with care.**
 
-**Independent engineering lab for AI-native products, developer platforms, and open source systems.**
+An independent engineering lab building developer tools, React components,
+and practical integrations for AI workflows.
 
-We build things we want to use — fast, opinionated, and production-minded.
-
-[florexlabs.com](https://florexlabs.com) • [All Repositories](https://github.com/florextech?tab=repositories) • [Open Source Projects](https://github.com/search?q=user%3Aflorextech+fork%3Afalse&type=repositories)
-
-![Independent Lab](https://img.shields.io/badge/Independent-Lab-0b0f19?style=flat-square)
-![AI Native](https://img.shields.io/badge/AI-Native-111827?style=flat-square)
-![Open Source Ecosystem](https://img.shields.io/badge/Open%20Source-Ecosystem-1f2937?style=flat-square)
-![Product Engineering](https://img.shields.io/badge/Product-Engineering-1e293b?style=flat-square)
-![TypeScript First](https://img.shields.io/badge/TypeScript-First-1d4ed8?style=flat-square)
-![Shipping Mode](https://img.shields.io/badge/Shipping-Mode-0f172a?style=flat-square)
+[Website](https://florexlabs.com) · [Public repositories](https://github.com/search?q=org%3Aflorextech+is%3Apublic+fork%3Afalse&type=repositories) · [Contact](mailto:hello@florexlabs.com)
 
 </div>
 
----
+## Open source projects
 
-## Future-facing software, built in public.
+| Project | What you can do with it |
+| --- | --- |
+| [Florex UI](https://github.com/florextech/florex-ui) | Build React interfaces with accessible components, design tokens, and Tailwind CSS. |
+| [Logcat Desk](https://github.com/florextech/logcat-desk) | Stream, filter, and export Android logs from a desktop app for macOS. |
+| [Chaos Internet Simulator](https://github.com/florextech/chaos-Internet-simulator) | Test unstable networks and APIs with a local proxy, dashboard, and CLI. |
+| [Docs to MCP](https://github.com/florextech/docs-to-mcp) | Turn documentation into a local MCP server for your AI tools. |
+| [Agent Bridge](https://github.com/florextech/agent-bridge) | Connect coding agents to Telegram, email, and a web terminal. |
+| [Deck](https://github.com/florextech/deck) | Use your tablet as a configurable control panel for actions on your computer. |
 
-Florex Labs is a living ecosystem of product engineering, AI systems, tooling, and platform experiments.
+### The Florex UI ecosystem
 
-Not a consulting shop. Not a slide deck factory.  
-Just a living lab that ships software.
+Explore the [component library](https://github.com/florextech/florex-ui),
+read the [documentation](https://github.com/florextech/florex-ui-docs),
+or connect your AI editor through the [MCP server](https://github.com/florextech/florex-ui-mcp).
 
----
+## How we build
 
-## Ecosystem, not a single project
+We focus on useful tools, clear interfaces, and maintainable code. Our work
+spans TypeScript, React, Node.js, desktop applications, and developer automation.
 
-- **Tooling** → dev-first products that reduce friction
-- **Infrastructure** → cloud-native building blocks for reliable shipping
-- **Experiments** → rapid iteration surfaces for new product bets
-- **AI systems** → practical agent workflows connected to real delivery
-- **Platforms** → full-stack products with strong DX and clear architecture
+Each project has its own setup instructions, license, and contribution guide.
+Start with its README to find the right way to run it or contribute.
 
----
+## Get involved
 
-## What we’re actively building
+- **Try a project** and share what works or what could improve.
+- **Report a bug** with reproduction steps in the project's issue tracker.
+- **Contribute** code, documentation, or accessibility improvements.
+- **Report a vulnerability** through the project's security policy.
 
-- **AI & Agent ecosystem** — practical systems for real engineering loops
-- **Developer tooling** — desktop apps, local tools, agent interfaces
-- **Open source products** — reusable repos teams can run, fork, and extend
-- **Full-stack engineering** — frontend, backend, data, and infra as one flow
-- **Design systems** — scalable UI primitives with product-quality polish
-- **Automation** — workflow orchestration for faster shipping
-- **Cloud-native infrastructure** — resilient, production-minded platform patterns
-- **TypeScript-first ecosystem** — shared language across product and tooling
-
----
-
-## Featured projects
-
-### 🌩️ [Chaos Internet Simulator](https://github.com/florextech/chaos-internet-simulator)
-Break your network on purpose. Test products against real-world chaos before users do.  
-`TypeScript` `Docker` `Chaos Engineering` `Developer Experience`
-
-### 📟 [Logcat Desk](https://github.com/florextech/logcat-desk)
-Desktop-grade Android Logcat workflow for macOS with live ADB streams and focused filtering.  
-`Electron` `React` `TypeScript` `Desktop Tooling`
-
-### 🎨 [Florex UI](https://github.com/florextech/florex-ui)
-Dark-first React design system with accessible components and clean token architecture.  
-`React` `Tailwind CSS` `Design System` `Frontend Platform`
-
-### 🤖 [Agent Bridge](https://github.com/florextech/agent-bridge)
-Notification infrastructure for code agents across chat, email, and terminal surfaces.  
-`NestJS` `Next.js` `AI Agents` `Automation`
-
----
-
-## Stack snapshot
-
-```txt
-Frontend   → React · Next.js · TailwindCSS
-Backend    → Node.js · NestJS
-Infra      → Docker · Cloudflare · Supabase
-Language   → TypeScript
-```
-
----
-
-## Current energy
-
-- Shipping products in public
-- Running fast experiments
-- Turning internal-grade ideas into open source tools
-- Building for builders: engineers, operators, and product teams
-
----
-
-## How we work
-
-- **Startup speed, product standards**
-- **Small teams, high ownership**
-- **AI as leverage, not decoration**
-- **Open source as real distribution**
-- **Ship, learn, iterate, repeat**
-
----
-
-## Explore the ecosystem
-
-- Start with the featured projects above and follow the thread into the broader Florex ecosystem.
-- Explore by focus: AI systems, developer tooling, design systems, and cloud-native product infrastructure.
-
----
-
-**Florex Labs** — building the next wave of developer products, one shipped experiment at a time.
+For product questions or collaboration, reach us at
+[hello@florexlabs.com](mailto:hello@florexlabs.com).

@@ -68,8 +68,8 @@ convention.
 
 ## CI and supply chain
 
-The stricter tier, used by `infrastructure` and `story-then-speak`, is the
-target for every new repository:
+The following CI and supply-chain practices are the target for every new
+repository:
 
 - `runs-on: ubuntu-24.04`, never `latest`
 - Workflow-level `permissions:` block, least privilege per job
@@ -132,5 +132,4 @@ Florex Labs uses AI agents as leverage, not as decoration. Two rules apply:
 
 Repositories that rely on agent workflows may carry an `AGENTS.md` at the root
 describing the working protocol. Where present, it takes precedence over this
-document for agent behaviour. `infrastructure` and `story-then-speak` are the
-current examples.
+document for agent behaviour.

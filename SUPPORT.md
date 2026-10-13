@@ -52,11 +52,10 @@ A question with a minimal reproduction is usually answered on the first reply.
 
 ---
 
-## Commercial and private products
+## Product inquiries
 
-Some Florex Labs repositories are private and not supported publicly. For
-commercial licensing, consulting, or private product access, contact
-**hello@florexlabs.com**.
+For product questions, licensing, or collaboration, contact
+[hello@florexlabs.com](mailto:hello@florexlabs.com).
 
 ---
 
