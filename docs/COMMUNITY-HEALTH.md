@@ -1,7 +1,9 @@
 # Florex Labs community health defaults
 
 Reference documentation for this repository. Maintained for contributors to the
-organization, not for the public profile page.
+organization, not for the public profile — that lives in
+[`../profile/README.md`](../profile/README.md) and is rendered on
+[github.com/florextech](https://github.com/florextech).
 
 ---
 
@@ -101,10 +103,18 @@ this repository already.
 
 ### The org profile README
 
-The root `README.md` of this repository is the organization profile shown on
-[github.com/florextech](https://github.com/florextech) — GitHub prefers it over
-`profile/README.md` in the `florextech/florextech` repository.
+The organization profile rendered on [github.com/florextech](https://github.com/florextech)
+comes from **`profile/README.md` in this repository**. The root `README.md`
+documents this repository itself and is not shown on the profile.
 
-Treat the top section as canonical and keep it in sync with
-`florextech/florextech/profile/README.md`. Any change to the public profile
-should land in both places, or this repository should stop tracking it.
+Edit the public profile in `profile/README.md`. The root `README.md` is free to
+be as technical as it needs to be.
+
+### The `florextech/florextech` repository
+
+That repository holds the same profile content at its root `README.md`. A
+repository named after the organization is not a profile repository, so it was
+never rendered on the profile and is now redundant.
+
+Confirm before removing it — it may be referenced elsewhere, and it may be
+serving an unconfirmed purpose.

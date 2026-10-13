@@ -1,122 +1,87 @@
-<div align="center">
+# Organization defaults for Florex Labs
 
-# Florex Labs
+This repository holds the **default community health files** for every
+repository in the [`florextech`](https://github.com/florextech) organization,
+and the [organization profile README](profile/README.md) rendered on
+[github.com/florextech](https://github.com/florextech).
 
-<sub>GitHub org: <code>florextech</code></sub>
+GitHub applies the health files automatically to any Florex Labs repository
+that does not define its own version. A repository with its own
+`CONTRIBUTING.md` or `SECURITY.md` keeps that file — these are defaults, not
+overrides.
 
-**Independent engineering lab for AI-native products, developer platforms, and open source systems.**
+## What applies automatically
 
-We build things we want to use — fast, opinionated, and production-minded.
+| File | Scope |
+| --- | --- |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution workflow, code standards, commit format |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Contributor Covenant 2.1 |
+| [`SECURITY.md`](SECURITY.md) | Vulnerability reporting, disclosure, safe harbor |
+| [`SUPPORT.md`](SUPPORT.md) | Where to get help |
+| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | WCAG 2.1 AA target and reporting process |
+| [`FUNDING.yml`](FUNDING.yml) | Sponsor button configuration |
+| [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) | Pull request checklist |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Bug, feature, and question templates |
+| [`.github/DISCUSSION_TEMPLATE/`](.github/DISCUSSION_TEMPLATE) | Discussion forms |
+| [`.github/VULNERABILITY_REPORT.yml`](.github/VULNERABILITY_REPORT.yml) | Private vulnerability reporting form |
 
-[florexlabs.com](https://florexlabs.com) • [All Repositories](https://github.com/florextech?tab=repositories) • [Open Source Projects](https://github.com/search?q=user%3Aflorextech+fork%3Afalse&type=repositories)
+These defaults apply to **private repositories too**, even though they are not
+visible there in the file browser.
 
-![Independent Lab](https://img.shields.io/badge/Independent-Lab-0b0f19?style=flat-square)
-![AI Native](https://img.shields.io/badge/AI-Native-111827?style=flat-square)
-![Open Source Ecosystem](https://img.shields.io/badge/Open%20Source-Ecosystem-1f2937?style=flat-square)
-![Product Engineering](https://img.shields.io/badge/Product-Engineering-1e293b?style=flat-square)
-![TypeScript First](https://img.shields.io/badge/TypeScript-First-1d4ed8?style=flat-square)
-![Shipping Mode](https://img.shields.io/badge/Shipping-Mode-0f172a?style=flat-square)
+## What does not apply automatically
 
-</div>
+GitHub does **not** propagate `LICENSE`, workflows, or repository settings from
+this repository. Each repository still needs its own:
 
----
+- **`LICENSE`** — MIT. Run `scripts/adopt-org-defaults.sh licenses` to add it.
+- **`.github/labeler.yml`**, **`.github/release.yml`**, **`.github/dependabot.yml`** — copy from [`.github/`](.github/).
+- **`.github/workflows/*`** — CI is per-repository by design.
+- **Labels** — a template that sets a label requires that label to exist in the
+  target repository. The script creates the standard set.
 
-## Future-facing software, built in public.
+## Adopting these defaults
 
-Florex Labs is a living ecosystem of product engineering, AI systems, tooling, and platform experiments.
+```bash
+# Preview what would change, across every repository in the org
+./scripts/adopt-org-defaults.sh --dry-run
 
-Not a consulting shop. Not a slide deck factory.  
-Just a living lab that ships software.
+# Create the standard label set everywhere
+./scripts/adopt-org-defaults.sh labels
 
----
+# Add the MIT LICENSE to repositories that lack one
+./scripts/adopt-org-defaults.sh licenses
 
-## Ecosystem, not a single project
-
-- **Tooling** → dev-first products that reduce friction
-- **Infrastructure** → cloud-native building blocks for reliable shipping
-- **Experiments** → rapid iteration surfaces for new product bets
-- **AI systems** → practical agent workflows connected to real delivery
-- **Platforms** → full-stack products with strong DX and clear architecture
-
----
-
-## What we’re actively building
-
-- **AI & Agent ecosystem** — practical systems for real engineering loops
-- **Developer tooling** — desktop apps, local tools, agent interfaces
-- **Open source products** — reusable repos teams can run, fork, and extend
-- **Full-stack engineering** — frontend, backend, data, and infra as one flow
-- **Design systems** — scalable UI primitives with product-quality polish
-- **Automation** — workflow orchestration for faster shipping
-- **Cloud-native infrastructure** — resilient, production-minded platform patterns
-- **TypeScript-first ecosystem** — shared language across product and tooling
-
----
-
-## Featured projects
-
-### 🌩️ [Chaos Internet Simulator](https://github.com/florextech/chaos-internet-simulator)
-Break your network on purpose. Test products against real-world chaos before users do.  
-`TypeScript` `Docker` `Chaos Engineering` `Developer Experience`
-
-### 📟 [Logcat Desk](https://github.com/florextech/logcat-desk)
-Desktop-grade Android Logcat workflow for macOS with live ADB streams and focused filtering.  
-`Electron` `React` `TypeScript` `Desktop Tooling`
-
-### 🎨 [Florex UI](https://github.com/florextech/florex-ui)
-Dark-first React design system with accessible components and clean token architecture.  
-`React` `Tailwind CSS` `Design System` `Frontend Platform`
-
-### 🤖 [Agent Bridge](https://github.com/florextech/agent-bridge)
-Notification infrastructure for code agents across chat, email, and terminal surfaces.  
-`NestJS` `Next.js` `AI Agents` `Automation`
-
----
-
-## Stack snapshot
-
-```txt
-Frontend   → React · Next.js · TailwindCSS
-Backend    → Node.js · NestJS
-Infra      → Docker · Cloudflare · Supabase
-Language   → TypeScript
+# Enable private vulnerability reporting and discussions
+./scripts/adopt-org-defaults.sh settings
 ```
 
----
+The script only touches repositories under `florextech`, skips anything that
+would overwrite an existing file or label, and never commits to your working
+tree.
 
-## Current energy
+## Editing these defaults
 
-- Shipping products in public
-- Running fast experiments
-- Turning internal-grade ideas into open source tools
-- Building for builders: engineers, operators, and product teams
+Changes take effect for all repositories at once. Repositories that have already
+adopted their own version of a file will not be affected.
 
----
+See [`docs/COMMUNITY-HEALTH.md`](docs/COMMUNITY-HEALTH.md) for precedence rules
+and override guidance, [`docs/STANDARDS.md`](docs/STANDARDS.md) for the
+engineering conventions these files encode, and
+[`docs/ADOPTION.md`](docs/ADOPTION.md) for the full rollout runbook.
 
-## How we work
+## Repository layout
 
-- **Startup speed, product standards**
-- **Small teams, high ownership**
-- **AI as leverage, not decoration**
-- **Open source as real distribution**
-- **Ship, learn, iterate, repeat**
-
----
-
-## Explore the ecosystem
-
-- Start with the featured projects above and follow the thread into the broader Florex ecosystem.
-- Explore by focus: AI systems, developer tooling, design systems, and cloud-native product infrastructure.
-
----
-
-**Florex Labs** — building the next wave of developer products, one shipped experiment at a time.
-
----
-
-<sub>This repository also holds the default
-[CONTRIBUTING](https://github.com/florextech/.github/blob/main/CONTRIBUTING.md),
-[SECURITY](https://github.com/florextech/.github/blob/main/SECURITY.md),
-[CODE_OF_CONDUCT](https://github.com/florextech/.github/blob/main/CODE_OF_CONDUCT.md)
-and [SUPPORT](https://github.com/florextech/.github/blob/main/SUPPORT.md)
-files applied across every Florex Labs repository.</sub>
+```text
+profile/README.md          -> rendered on the organization profile
+README.md                  -> this file
+CONTRIBUTING.md            -> default contribution guide
+CODE_OF_CONDUCT.md         -> default code of conduct
+SECURITY.md                -> default security policy
+SUPPORT.md                 -> default support channels
+ACCESSIBILITY.md           -> default accessibility policy
+FUNDING.yml                -> default funding links
+LICENSE                    -> MIT for this repository
+.github/                   -> templates and optional per-repo config
+docs/                      -> reference documentation
+scripts/                   -> organization-wide rollout tooling
+```
